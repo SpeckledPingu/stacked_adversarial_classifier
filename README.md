@@ -23,3 +23,5 @@ By leveraging confusion as the metric as well as reinforcing a more generalized 
 It was found in testing and developing that if a fraud dataset has a significant portion (~90%) of known good behavior, the normal dataset can be labled 0 as the prediction dataset. Thus, the classifier learns the structure of the normal data and the anomalous/fraud/threat data is distinguished as significantly different.
 
 However, the BENCHMARK_v2 notebook was meant to simulate a more real world benchmark where labeled data is not available. Instead, the data is run through a histogram based outlier algorithm, labeled, and the outlier labels are used as the target data. After running it through a Random Forest classifier, it not only improved the TPR-FPR ratio, but also recall and did better than a standard supervised classification approach.
+
+Due to the distribution of the confusion probabilities, the TPR-FPR rate can be tuned more finely based on feedback than the standard supervised classifier. As a result, this improves response capabilities to alarm fatigue without retraining.
